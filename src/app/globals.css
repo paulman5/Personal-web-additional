@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  height: 100%;
+}
+input:focus {
+  outline: none !important;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+.active {
+  border-color: rgb(
+    121,
+    168,
+    248
+  ) !important; /* Change to whatever color you want */
+}
+.dark {
+  background-color: black;
+  color: white;
+}
+.light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+  color: black;
+}
+.dark .socialicons {
+  fill: #a1a1aa;
+}
+.dark .socialicons:hover {
+  fill: #d4d4d8;
+}
+.light .socialicons {
+  fill: #71717a;
+}
+.light .socialicons:hover {
+  fill: #52525b;
+}
+.dark h1 {
+  color: white;
+}
+.light h1 {
+  --tw-bg-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
+}
+.dark h2 {
+  color: white;
+}
+.light h2 {
+  --tw-bg-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
+}
+.dark h3 {
+  color: white;
+}
+.light h3s {
+  --tw-bg-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
+}
+.dark p {
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+.light p {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+.dark .contact-button button:hover {
+  color: rgb(98, 93, 93);
+  transition: all 150ms;
+}
+.dark .contact-modal {
+  background-color: #262628;
+}
+.dark .closebutton {
+  fill: white;
+}
+.second-layer {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
+}
+.second-layer-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+  --tw-ring-color: hsla(240, 5%, 84%, 0.2);
+}
+.second-layer-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+.dark-inner {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+.light-inner {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+:root.dark .theme-section {
+  background-color: rgba(39, 39, 42, 0.9);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+:root.light .theme-section {
+  background-color: white;
+  border: 0 solid #e5e7eb;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.theme-section button:hover {
+  opacity: 50%;
+  transition: 300ms all;
+}
+.stack-section {
+  @apply w-96;
+}
+.dark .stack-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+.light .stack-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230, 230, 230) transparent;
+}
+.stack-button {
+  cursor: pointer;
+  border: 0.1px solid transparent;
+  transition: 300ms all;
+}
+.light .stack-button:hover {
+  border-color: rgb(14, 10, 10);
+}
+.dark .stack-button:hover {
+  border-color: white;
+}
+.stack-button:hover + div {
+  display: block;
+  position: relative;
+}
+.dark .article-hover:hover {
+  background-color: rgb(128 128 128 / var(--tw-bg-opacity)) !important;
+  --tw-bg-opacity: 0.1;
+}
+.dark .email-login input {
+  background-color: #262628 !important;
+}
+.dark .social-login button {
+  border-color: #3d3d42;
+}
+.dark .social-login button:hover {
+  background-color: #52525b;
+}
+
+@media only screen and (max-width: 700px) {
+  .about-section {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .stack-section {
+    width: 18rem;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .roadmap {
+    margin-top: 1rem !important;
+  }
+  .roadmap-svg {
+    width: 460px !important;
+    height: 390px !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .roadmap-svg {
+    width: 500px;
+    height: 350px;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
