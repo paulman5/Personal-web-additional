@@ -116,19 +116,19 @@ export default function RollupsArticle() {
                 <div className="flex items-center mt-8 ml-10">
                   <p>
                     There are two versions of rollups: Optimistic rollups and ZK
-                    rollups. Optimistic rollups only validate transactions when
-                    disputes arise, however, they do so on-chain. Hence,
-                    computational power is reduced. However, validation still
-                    happens on-chain and therefore, they are still reliant on
-                    the high transaction fees induced by the mainchain. In
-                    comparison, ZK rollups offer a different philosophy by
-                    validating transactions off-chain and only anchoring the
+                    rollups. Optimistic rollups validate transactions off-chain
+                    and only validate transactions on-chain when disputes arise.
+                    Additionally, optimistic rollups have a dispute resolution
+                    period, giving network users time to rule out fraudulent
+                    transactions. In comparison, ZK rollups offer a different
+                    philosophy by validating transactions off-chain through
+                    mathematical verifiable proofs and only anchoring the
                     bundled data on-chain as a final step to validate the
                     transactions. Consequently, a system is designed where trust
                     is automatically incorporated into every transaction on the
-                    Rollup while still reaping all the security benefits
-                    blockchain networks have to offer, while minimizing
-                    transaction fees.
+                    Rollup while still reaping all the security benefits the
+                    mainnet has to offer and minimizing transaction fees in the
+                    process.
                   </p>
                 </div>
                 <div className="flex items-center mt-8 ml-10">
