@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Modalhook from "../hooks/modalhook"
 import { Closebutton } from "../lib/icons/closebutton"
 import { Hello } from "../lib/icons/hello"
@@ -8,6 +8,7 @@ import { Tooltip as ReactTooltip } from "react-tooltip"
 
 export default function Footer() {
   const { isOpen, openModal, closeModal } = Modalhook()
+  const [isCopied, setIsCopied] = useState(false)
 
   useEffect(() => {
     if (isOpen) {
@@ -20,6 +21,7 @@ export default function Footer() {
   function copyToClipboard() {
     navigator.clipboard.writeText("mierlo.paul@hotmail.com")
   }
+
   return (
     <>
       <div className="mt-32 ">
@@ -73,16 +75,28 @@ export default function Footer() {
                 <div className="flex justify-center mt-3 ">
                   <button
                     data-tooltip-id="my-tooltip-1"
-                    onClick={copyToClipboard}
+                    onClick={() => {
+                      copyToClipboard()
+                      setIsCopied(true)
+                    }}
+                    onMouseOut={() => setTimeout(() => setIsCopied(false), 150)}
                     className="my-email font-semibold cursor-pointer"
                   >
-                    paulmierlo@hotmail.com
+                    mierlo.paul@hotmail.nl
                   </button>
-                  <ReactTooltip
-                    id="my-tooltip-1"
-                    place="bottom"
-                    content="Click to copy to clipboard"
-                  />
+                  {isCopied ? (
+                    <ReactTooltip
+                      id="my-tooltip-1"
+                      place="bottom"
+                      content="Copied to clipboard"
+                    />
+                  ) : (
+                    <ReactTooltip
+                      id="my-tooltip-1"
+                      place="bottom"
+                      content="Click to copy to clipboard"
+                    />
+                  )}
                 </div>
               </div>
             </div>
