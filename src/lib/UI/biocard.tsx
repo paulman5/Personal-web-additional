@@ -101,7 +101,7 @@ export default function BioCard({
               <ReactTooltip
                 id="my-tooltip-1"
                 place="bottom"
-                content="Click to copy to copy email"
+                content="Click to copy to email"
               />
             )}
           </ButtonGroup>
