@@ -35,7 +35,7 @@ export default function BioCard({
   setIsCopied,
 }: BioCardProps) {
   function copyToClipboard() {
-    navigator.clipboard.writeText("mierlo.paul@hotmail.com")
+    navigator.clipboard.writeText("mierlo.paul@hotmail.nl")
   }
 
   return (
@@ -83,7 +83,7 @@ export default function BioCard({
             <Button
               data-tooltip-id="my-tooltip-1"
               onClick={() => {
-                copyToClipboard
+                copyToClipboard()
                 setIsCopied(true)
               }}
               onMouseOut={() => setTimeout(() => setIsCopied(false), 150)}
